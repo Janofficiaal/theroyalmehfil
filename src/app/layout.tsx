@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import { RoyalAudioProvider } from "@/context/RoyalAudioContext";
+import GlobalAudioControls from "@/components/audio/GlobalAudioControls";
+
+const royalKudus = localFont({
+  src: "../fonts/DreamKudos.ttf",
+  variable: "--font-kudus",
+  display: "swap",
+  fallback: ["Cormorant Garamond", "serif"],
+});
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -45,9 +55,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${dmSans.variable} antialiased`}
+      className={`${royalKudus.variable} ${cormorant.variable} ${dmSans.variable} antialiased`}
     >
-      <body className="min-h-screen bg-deep-black text-ivory">{children}</body>
+      <body className="min-h-screen bg-deep-black text-ivory">
+        <RoyalAudioProvider>
+          {children}
+          <GlobalAudioControls />
+        </RoyalAudioProvider>
+      </body>
     </html>
   );
 }

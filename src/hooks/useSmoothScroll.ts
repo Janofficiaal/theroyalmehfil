@@ -1,46 +1,64 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import type Lenis from "lenis";
 
 export function useSmoothScroll() {
-  const lenisRef = useRef<any>(null);
+  const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
-    let lenis: any;
-    let rafId: number;
-
-    const init = async () => {
-      const Lenis = (await import("lenis")).default;
-      lenis = new Lenis({
-        duration: 1.2,
-        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        orientation: "vertical",
-        gestureOrientation: "vertical",
-        smoothWheel: true,
-        touchMultiplier: 2,
-      });
-
-      lenisRef.current = lenis;
-
-      function raf(time: number) {
-        lenis.raf(time);
-        rafId = requestAnimationFrame(raf);
-      }
-
-      rafId = requestAnimationFrame(raf);
-    };
-
-    // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    if (!prefersReducedMotion) {
-      init();
-    }
+    if (prefersReducedMotion) return;
+
+    let lenis: Lenis | null = null;
+    let tickerCallback: ((time: number) => void) | null = null;
+    let isMounted = true;
+
+    const init = async () => {
+      const [{ default: LenisClass }, { gsap }, { ScrollTrigger }] =
+        await Promise.all([
+          import("lenis"),
+          import("gsap"),
+          import("gsap/ScrollTrigger"),
+        ]);
+
+      if (!isMounted) return;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      lenis = new LenisClass({
+        duration: 1.25,
+        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: "vertical",
+        gestureOrientation: "vertical",
+        smoothWheel: true,
+        touchMultiplier: 1.8,
+      });
+
+      lenisRef.current = lenis;
+
+      lenis.on("scroll", ScrollTrigger.update);
+
+      tickerCallback = (time: number) => {
+        lenis?.raf(time * 1000);
+      };
+
+      gsap.ticker.add(tickerCallback);
+      gsap.ticker.lagSmoothing(0);
+    };
+
+    init();
 
     return () => {
-      if (rafId) cancelAnimationFrame(rafId);
+      isMounted = false;
+      if (tickerCallback) {
+        import("gsap").then(({ gsap }) => {
+          if (tickerCallback) gsap.ticker.remove(tickerCallback);
+        });
+      }
       lenis?.destroy();
     };
   }, []);

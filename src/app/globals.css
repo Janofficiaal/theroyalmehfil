@@ -10,9 +10,15 @@
   --color-gold: #D4AF5F;
   --color-champagne: #E8D6A3;
   --color-ivory: #F6F0E4;
-  --color-white: #FFFFFF;
-  --font-heading: var(--font-cormorant);
+  --font-heading: var(--font-kudus), var(--font-cormorant), serif;
+  --font-kudus: var(--font-kudus), serif;
   --font-body: var(--font-dm-sans);
+}
+
+@font-face {
+  font-family: 'RoyalKudus';
+  src: url('/fonts/DreamKudos.ttf') format('truetype');
+  font-display: swap;
 }
 
 /* ── Base ───────────────────────────────── */
@@ -20,25 +26,26 @@
 html {
   background: #080806;
   color: #F6F0E4;
-  scroll-behavior: auto; /* Lenis handles smooth scroll */
 }
 
 body {
-  font-family: var(--font-body), 'DM Sans', sans-serif;
-  background: var(--color-deep-black);
-  color: var(--color-ivory);
+  font-family: var(--font-body, "DM Sans", sans-serif);
+  background: #080806;
+  color: #F6F0E4;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-kudus, "RoyalKudus"), var(--font-heading, "Cormorant Garamond"), serif;
+}
+
+.font-kudus {
+  font-family: var(--font-kudus, "RoyalKudus"), serif;
 }
 
 ::selection {
   background: rgba(212, 175, 95, 0.35);
   color: #F6F0E4;
-}
-
-/* ── Typography ─────────────────────────── */
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), 'Cormorant Garamond', serif;
 }
 
 /* ── Custom Cursor ──────────────────────── */
@@ -69,9 +76,11 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   height: 2px;
+  width: 100%;
   background: linear-gradient(90deg, #D4AF5F, #E8D6A3);
   z-index: 9998;
   transform-origin: left;
+  transform: scaleX(0);
 }
 
 /* ── Loading Screen ─────────────────────── */
@@ -84,16 +93,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   background: #080806;
-}
-
-.loading-logo {
-  opacity: 0;
-  animation: loadingPulse 1.5s ease-in-out infinite;
-}
-
-@keyframes loadingPulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
 }
 
 /* ── Gold Shimmer Text ──────────────────── */
@@ -154,26 +153,39 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
-/* ── Section Reveal ─────────────────────── */
+/* ── Nav ────────────────────────────────── */
 
-.reveal-up {
-  opacity: 0;
-  transform: translateY(60px);
+.nav-link {
+  position: relative;
+  font-family: var(--font-body, "DM Sans", sans-serif);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #F7DCE3;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.reveal-left {
-  opacity: 0;
-  transform: translateX(-60px);
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #D98FA5;
+  box-shadow: 0 0 8px rgba(217, 143, 165, 0.45);
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.reveal-right {
-  opacity: 0;
-  transform: translateX(60px);
+.nav-link:hover {
+  color: #D98FA5;
 }
 
-.reveal-scale {
-  opacity: 0;
-  transform: scale(0.9);
+.nav-link:hover::after {
+  width: 100%;
 }
 
 /* ── Horizontal Scroll Gallery ──────────── */
@@ -184,63 +196,48 @@ h1, h2, h3, h4, h5, h6 {
   will-change: transform;
 }
 
-/* ── Nav ────────────────────────────────── */
+/* ── Floating Petal Animation ──────────── */
 
-.nav-link {
-  position: relative;
-  font-family: var(--font-body), sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-champagne);
-  transition: color 0.3s ease;
+@keyframes petalFall {
+  0% {
+    transform: translateY(-20px) rotate(0deg) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(105vh) rotate(360deg) translateX(80px);
+    opacity: 0;
+  }
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--color-gold);
-  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.animate-petal-fall {
+  animation: petalFall 10s linear infinite;
 }
 
-.nav-link:hover {
-  color: var(--color-gold);
+@keyframes petalDrift {
+  0% {
+    transform: translateY(-30px) rotate(0deg) scale(0.9);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) rotate(540deg) scale(1.1);
+    opacity: 0;
+  }
 }
 
-.nav-link:hover::after {
-  width: 100%;
-}
-
-/* ── Image Reveal ───────────────────────── */
-
-.image-reveal {
-  position: relative;
-  overflow: hidden;
-}
-
-.image-reveal::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--color-deep-black);
-  transform-origin: right;
-}
-
-/* ── Canvas Container ───────────────────── */
-
-.three-canvas-container {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.three-canvas-container canvas {
-  pointer-events: none;
+.animate-petal-drift {
+  animation: petalDrift 11s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 /* ── Prefers Reduced Motion ─────────────── */
@@ -278,4 +275,35 @@ h1, h2, h3, h4, h5, h6 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(212, 175, 95, 0.5);
+}
+
+/* ── Royal Sound Wave Indicator Animations ──────────── */
+@keyframes royalWave1 {
+  0%, 100% { height: 4px; }
+  50% { height: 14px; }
+}
+@keyframes royalWave2 {
+  0%, 100% { height: 14px; }
+  50% { height: 6px; }
+}
+@keyframes royalWave3 {
+  0%, 100% { height: 8px; }
+  50% { height: 16px; }
+}
+@keyframes royalWave4 {
+  0%, 100% { height: 12px; }
+  50% { height: 4px; }
+}
+
+.animate-sound-wave-1 {
+  animation: royalWave1 1.1s ease-in-out infinite;
+}
+.animate-sound-wave-2 {
+  animation: royalWave2 0.85s ease-in-out infinite;
+}
+.animate-sound-wave-3 {
+  animation: royalWave3 1.25s ease-in-out infinite;
+}
+.animate-sound-wave-4 {
+  animation: royalWave4 0.95s ease-in-out infinite;
 }

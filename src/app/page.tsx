@@ -9,6 +9,7 @@ const LoadingScreen = dynamic(() => import("@/components/ui/LoadingScreen"), { s
 const RoyalNavigation = dynamic(() => import("@/components/ui/RoyalNavigation"), { ssr: false });
 const RoyalScrollExperience = dynamic(() => import("@/components/sections/RoyalScrollExperience"), { ssr: false });
 const ExperienceSection = dynamic(() => import("@/components/sections/ExperienceSection"), { ssr: false });
+const TransformationSection = dynamic(() => import("@/components/sections/TransformationSection"), { ssr: false });
 const MehfilAssemblySection = dynamic(() => import("@/components/sections/MehfilAssemblySection"), { ssr: false });
 const EventsSection = dynamic(() => import("@/components/sections/EventsSection"), { ssr: false });
 const ServicesSection = dynamic(() => import("@/components/sections/ServicesSection"), { ssr: false });
@@ -35,7 +36,10 @@ export default function HomePage() {
         {/* 02 — The Royal Experience */}
         <ExperienceSection />
 
-        {/* 03 — Mehfil Assembly */}
+        {/* 03 — Venue Transformation (Before & After) */}
+        <TransformationSection />
+
+        {/* 04 — Mehfil Assembly */}
         <MehfilAssemblySection />
 
         {/* 04 — Events */}

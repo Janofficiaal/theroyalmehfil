@@ -159,17 +159,18 @@ export default function ServicesSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-deep-black via-royal-black to-deep-black" />
 
       <div className="relative max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
-        <div className="text-center mb-16 md:mb-24">
-          <p className="font-body text-[10px] tracking-[0.5em] uppercase text-gold/70 mb-5">
-            04 — Complete Event Solutions
+        <div className="text-center mb-14 md:mb-20">
+          <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-[#D4AF62] mb-3">
+            05 — BESPOKE SERVICES
           </p>
-          <h2 className="services-heading font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-champagne tracking-wide">
-            Every Detail, <span className="italic text-gold">Perfected</span>
+          <h2 className="services-heading font-kudus text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-[#FFF8E9] tracking-[0.12em] leading-tight">
+            EVERY DETAIL
           </h2>
-          <p className="font-body text-sm md:text-base text-ivory/60 max-w-2xl mx-auto mt-5 tracking-wide">
-            Everything you need — all under one roof. From concept to
-            celebration, we deliver a comprehensive suite of luxury event
-            services tailored to your vision.
+          <h2 className="services-heading font-kudus text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-[#F2B8C6] tracking-[0.12em] leading-tight mb-4">
+            MASTERED TO PERFECTION
+          </h2>
+          <p className="font-sans text-xs sm:text-sm text-[#F7DCE3]/75 max-w-xl mx-auto tracking-wide">
+            End-to-end luxury event design, production, and direction under one distinguished roof.
           </p>
         </div>
 
@@ -179,29 +180,29 @@ export default function ServicesSection() {
             return (
               <div
                 key={service.title}
-                className="service-item group relative p-6 md:p-8 border border-gold/10 hover:border-gold/35 bg-royal-black/60 hover:bg-gold/[0.04] transition-all duration-500 cursor-default"
+                className="service-item group relative p-6 md:p-8 border border-[#D4AF62]/20 hover:border-[#D4AF62]/60 bg-[#16040A]/60 hover:bg-[#D4AF62]/[0.05] transition-all duration-500 cursor-default"
                 data-cursor-hover
               >
                 <div className="flex items-start justify-between gap-4 mb-4">
-                  <div className="w-10 h-10 flex items-center justify-center border border-gold/25 group-hover:border-gold/60 transition-colors duration-300">
+                  <div className="w-10 h-10 flex items-center justify-center border border-[#D4AF62]/35 group-hover:border-[#D4AF62] transition-colors duration-300">
                     <Icon
-                      className="w-4 h-4 text-gold/75 group-hover:text-gold transition-colors duration-300"
+                      className="w-4 h-4 text-[#D4AF62] group-hover:text-[#F2B8C6] transition-colors duration-300"
                       strokeWidth={1.5}
                     />
                   </div>
-                  <span className="font-body text-[10px] tracking-[0.25em] text-gold/35 group-hover:text-gold/70 transition-colors">
+                  <span className="font-kudus text-[10px] tracking-[0.25em] text-[#D4AF62]/50 group-hover:text-[#D4AF62] transition-colors">
                     {String(idx + 1).padStart(2, "0")}
                   </span>
                 </div>
 
-                <h3 className="font-heading text-lg md:text-xl text-champagne/95 font-light tracking-wide leading-snug group-hover:text-gold transition-colors duration-300 mb-2">
+                <h3 className="font-kudus text-sm md:text-base text-[#FFF8E9] font-normal tracking-[0.08em] leading-snug group-hover:text-[#F2B8C6] transition-colors duration-300 mb-2">
                   {service.title}
                 </h3>
-                <p className="font-body text-xs md:text-sm text-ivory/50 leading-relaxed">
+                <p className="font-sans text-xs text-[#FFF8E9]/60 leading-relaxed">
                   {service.detail}
                 </p>
 
-                <div className="absolute top-0 left-0 w-0 group-hover:w-full h-[1px] bg-gradient-to-r from-gold/60 via-champagne/30 to-transparent transition-all duration-700" />
+                <div className="absolute top-0 left-0 w-0 group-hover:w-full h-[1px] bg-gradient-to-r from-[#D4AF62] via-[#F2B8C6]/50 to-transparent transition-all duration-700" />
               </div>
             );
           })}

@@ -68,11 +68,10 @@ export function RoyalAudioProvider({ children }: { children: React.ReactNode }) 
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isMuted, setIsMuted] = useState<boolean>(false);
   const [isAutoplayBlocked, setIsAutoplayBlocked] = useState<boolean>(false);
-  const [volume, setVolumeState] = useState<number>(DEFAULT_VOLUME);
+  const [volume, setVolumeState] = useState<number>(getSavedSessionVolume);
   const [currentTime, setCurrentTime] = useState<number>(0);
   const [duration, setDuration] = useState<number>(0);
 
-  const audioRef = useRef<HTMLAudioElement | null>(null);
   const hasAttemptedAutoplay = useRef<boolean>(false);
 
   useEffect(() => {
@@ -80,16 +79,6 @@ export function RoyalAudioProvider({ children }: { children: React.ReactNode }) 
 
     const audio = getGlobalAudio();
     if (!audio) return;
-    audioRef.current = audio;
-
-    // Ensure audio volume is exactly respected on initialization
-    const initialVol = getSavedSessionVolume();
-    audio.volume = initialVol;
-    setVolumeState(initialVol);
-
-    // Synchronize initial state with audio element
-    setIsMuted(audio.muted);
-    setIsPlaying(!audio.paused);
 
     const onPlay = () => setIsPlaying(true);
     const onPause = () => setIsPlaying(false);
@@ -128,14 +117,16 @@ export function RoyalAudioProvider({ children }: { children: React.ReactNode }) 
 
             // Per standard browser behavior: allow first interaction (click/touch) to resume seamlessly
             const unlockAudioOnGesture = () => {
-              audio
-                .play()
-                .then(() => {
-                  setIsPlaying(true);
-                  setIsAutoplayBlocked(false);
-                })
-                .catch(() => {});
-
+              const currentAudio = getGlobalAudio();
+              if (currentAudio) {
+                currentAudio
+                  .play()
+                  .then(() => {
+                    setIsPlaying(true);
+                    setIsAutoplayBlocked(false);
+                  })
+                  .catch(() => {});
+              }
               removeGestureListeners();
             };
 
@@ -162,7 +153,7 @@ export function RoyalAudioProvider({ children }: { children: React.ReactNode }) 
   }, []);
 
   const togglePlay = useCallback(() => {
-    const audio = audioRef.current || getGlobalAudio();
+    const audio = getGlobalAudio();
     if (!audio) return;
 
     if (audio.paused) {
@@ -182,7 +173,7 @@ export function RoyalAudioProvider({ children }: { children: React.ReactNode }) 
   }, []);
 
   const toggleMute = useCallback(() => {
-    const audio = audioRef.current || getGlobalAudio();
+    const audio = getGlobalAudio();
     if (!audio) return;
 
     // Preserves playback position and does not overwrite volume
@@ -191,7 +182,7 @@ export function RoyalAudioProvider({ children }: { children: React.ReactNode }) 
   }, []);
 
   const setVolume = useCallback((newVolume: number) => {
-    const audio = audioRef.current || getGlobalAudio();
+    const audio = getGlobalAudio();
     if (!audio) return;
 
     const clamped = Math.max(0, Math.min(1, newVolume));
@@ -210,7 +201,7 @@ export function RoyalAudioProvider({ children }: { children: React.ReactNode }) 
   }, []);
 
   const enableMusic = useCallback(() => {
-    const audio = audioRef.current || getGlobalAudio();
+    const audio = getGlobalAudio();
     if (!audio) return;
 
     audio.muted = false;

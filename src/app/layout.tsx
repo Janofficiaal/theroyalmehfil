@@ -3,7 +3,9 @@ import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { RoyalAudioProvider } from "@/context/RoyalAudioContext";
+import { BookingModalProvider } from "@/context/BookingModalContext";
 import GlobalAudioControls from "@/components/audio/GlobalAudioControls";
+import RoyalBookingModal from "@/components/ui/RoyalBookingModal";
 
 const royalKudus = localFont({
   src: "../fonts/DreamKudos.ttf",
@@ -59,8 +61,11 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-deep-black text-ivory">
         <RoyalAudioProvider>
-          {children}
-          <GlobalAudioControls />
+          <BookingModalProvider>
+            {children}
+            <GlobalAudioControls />
+            <RoyalBookingModal />
+          </BookingModalProvider>
         </RoyalAudioProvider>
       </body>
     </html>

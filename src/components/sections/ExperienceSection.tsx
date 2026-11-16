@@ -112,39 +112,28 @@ export default function ExperienceSection() {
             </p>
 
             <div className="exp-heading overflow-hidden">
-              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-champagne leading-[1.08] tracking-wide">
-                <span className="exp-word inline-block">An&nbsp;</span>
-                <span className="exp-word inline-block italic text-gold">
-                  Art&nbsp;
-                </span>
-                <span className="exp-word inline-block">of</span>
+              <h2 className="font-kudus text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-[#FFF8E9] leading-[1.14] tracking-[0.1em]">
+                <span className="exp-word inline-block">CRAFTING</span>
                 <br />
-                <span className="exp-word inline-block">Creating&nbsp;</span>
-                <span className="exp-word inline-block italic text-gold">
-                  Extraordinary
+                <span className="exp-word inline-block text-[#F2B8C6]">
+                  EXTRAORDINARY
                 </span>
                 <br />
-                <span className="exp-word inline-block">Moments.</span>
+                <span className="exp-word inline-block">MOMENTS</span>
               </h2>
             </div>
 
-            <div className="exp-ornament flex items-center gap-4 my-9 origin-left">
-              <div className="w-20 h-[1px] bg-gradient-to-r from-gold/70 to-transparent" />
-              <div className="w-1.5 h-1.5 rotate-45 bg-gold/60" />
+            <div className="exp-ornament flex items-center gap-4 my-8 origin-left">
+              <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF62] to-transparent" />
+              <div className="w-1.5 h-1.5 rotate-45 bg-[#D4AF62]" />
             </div>
 
-            <div className="exp-body max-w-xl space-y-5">
-              <p className="font-body text-sm md:text-base text-ivory/75 leading-relaxed tracking-wide">
-                Welcome to The Royal Mehfil — where elegance meets perfection
-                and every celebration is crafted with a royal touch. Based in
-                the United Kingdom, we specialise in luxury event planning and
-                complete event solutions under one roof.
+            <div className="exp-body max-w-xl space-y-4">
+              <p className="font-sans text-sm md:text-base text-[#FFF8E9]/80 leading-relaxed tracking-wide">
+                Where royal heritage meets modern luxury. Based in the United Kingdom, The Royal Mehfil designs immersive celebrations defined by architectural staging, master floral artistry, and fine hospitality.
               </p>
-              <p className="font-body text-sm md:text-base text-ivory/60 leading-relaxed tracking-wide">
-                From intimate gatherings to grand occasions, our dedicated team
-                brings together artistry, precision, and an unwavering
-                commitment to excellence, ensuring every detail is thoughtfully
-                curated to perfection.
+              <p className="font-sans text-xs md:text-sm text-[#F7DCE3]/65 leading-relaxed tracking-wide">
+                Every detail curated with absolute precision for unforgettable weddings and galas.
               </p>
             </div>
           </div>

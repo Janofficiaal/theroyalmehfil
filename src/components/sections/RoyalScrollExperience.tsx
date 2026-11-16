@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useBookingModal } from "@/context/BookingModalContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -87,6 +88,7 @@ export default function RoyalScrollExperience() {
   const leftDoorRef = useRef<HTMLDivElement>(null);
   const rightDoorRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const { openBooking } = useBookingModal();
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -653,8 +655,9 @@ export default function RoyalScrollExperience() {
           </h3>
 
           <div className="scene4-brand-text pointer-events-auto">
-            <a
-              href="#contact"
+            <button
+              type="button"
+              onClick={openBooking}
               className="inline-flex items-center gap-3 px-10 py-4 rounded-full border border-[#D4AF62] font-kudus text-[13px] tracking-[0.2em] uppercase font-normal transition-all duration-300 shadow-[0_4px_24px_rgba(184,67,96,0.45),0_0_15px_rgba(212,175,98,0.3)] hover:shadow-[0_6px_30px_rgba(184,67,96,0.65),0_0_22px_rgba(212,175,98,0.5)] hover:scale-[1.03] group cursor-pointer"
               style={{
                 background: "linear-gradient(135deg, #B84360 0%, #8A2038 100%)",
@@ -663,7 +666,7 @@ export default function RoyalScrollExperience() {
             >
               <span>PLAN YOUR EVENT</span>
               <span className="text-[13px] text-[#D4AF62] group-hover:translate-x-1 transition-transform">→</span>
-            </a>
+            </button>
           </div>
         </div>
       </div>

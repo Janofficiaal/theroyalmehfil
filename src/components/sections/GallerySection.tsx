@@ -147,12 +147,18 @@ export default function GallerySection() {
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold/25 to-transparent" />
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 mb-14 md:mb-20">
-        <p className="font-body text-[10px] tracking-[0.5em] uppercase text-gold/70 mb-5">
-          05 — Signature Celebrations
+        <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-[#D4AF62] mb-3">
+          07 — SIGNATURE GALLERIES
         </p>
-        <h2 className="gallery-heading font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-champagne tracking-wide">
-          Moments of <span className="italic text-gold">Grandeur</span>
+        <h2 className="gallery-heading font-kudus text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-[#FFF8E9] tracking-[0.12em] leading-tight">
+          MOMENTS OF
         </h2>
+        <h2 className="gallery-heading font-kudus text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-[#F2B8C6] tracking-[0.12em] leading-tight mb-4">
+          ROYAL GRANDEUR
+        </h2>
+        <p className="font-sans text-xs sm:text-sm text-[#F7DCE3]/75 max-w-lg tracking-wide">
+          Curated wedding stages, royal floral artistry, and fine dining receptions across the United Kingdom.
+        </p>
       </div>
 
       {/* Desktop: 3D Curved Horizontal Scroll / Mobile: Vertical Stack */}

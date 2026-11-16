@@ -101,14 +101,19 @@ export default function WhyChooseSection() {
 
       <div className="relative max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
         {/* Header */}
-        <div className="text-center mb-20 md:mb-28">
-          <p className="font-body text-[10px] tracking-[0.5em] uppercase text-gold/50 mb-6">
-            06 — Why Choose Us
+        <div className="text-center mb-16 md:mb-24">
+          <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-[#D4AF62] mb-3">
+            06 — WHY THE ROYAL MEHFIL
           </p>
-          <h2 className="why-heading font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-champagne tracking-wide">
-            The Royal{" "}
-            <span className="italic text-gold">Difference</span>
+          <h2 className="why-heading font-kudus text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-[#FFF8E9] tracking-[0.12em] leading-tight">
+            THE ROYAL
           </h2>
+          <h2 className="why-heading font-kudus text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-[#F2B8C6] tracking-[0.12em] leading-tight mb-4">
+            STANDARD
+          </h2>
+          <p className="font-sans text-xs sm:text-sm text-[#F7DCE3]/75 max-w-lg mx-auto tracking-wide">
+            Defined by architectural excellence, master craftsmanship, and absolute discretion.
+          </p>
         </div>
 
         {/* Reasons Grid */}
@@ -118,22 +123,22 @@ export default function WhyChooseSection() {
             return (
               <div
                 key={reason.title}
-                className="why-card group relative p-8 md:p-10 border border-gold/[0.06] hover:border-gold/15 bg-deep-black/50 transition-all duration-500"
+                className="why-card group relative p-8 md:p-10 border border-[#D4AF62]/15 hover:border-[#D4AF62]/45 bg-[#140308]/60 transition-all duration-500"
                 data-cursor-hover
               >
                 {/* Icon */}
-                <div className="w-12 h-12 flex items-center justify-center border border-gold/15 group-hover:border-gold/30 mb-6 transition-colors duration-500">
+                <div className="w-12 h-12 flex items-center justify-center border border-[#D4AF62]/25 group-hover:border-[#D4AF62] mb-6 transition-colors duration-500">
                   <Icon
-                    className="w-5 h-5 text-gold/50 group-hover:text-gold transition-colors duration-300"
+                    className="w-5 h-5 text-[#D4AF62] group-hover:text-[#F2B8C6] transition-colors duration-300"
                     strokeWidth={1.5}
                   />
                 </div>
 
                 {/* Content */}
-                <h3 className="font-heading text-xl md:text-2xl text-champagne font-light tracking-wide mb-4 group-hover:text-gold transition-colors duration-300">
+                <h3 className="font-kudus text-base md:text-lg text-[#FFF8E9] font-normal tracking-[0.08em] mb-3 group-hover:text-[#F2B8C6] transition-colors duration-300">
                   {reason.title}
                 </h3>
-                <p className="font-body text-sm text-ivory/50 leading-relaxed tracking-wide">
+                <p className="font-sans text-xs sm:text-sm text-[#FFF8E9]/60 leading-relaxed tracking-wide">
                   {reason.description}
                 </p>
 

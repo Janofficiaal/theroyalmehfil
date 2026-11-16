@@ -317,12 +317,14 @@ export default function MehfilAssemblySection() {
 
         {/* Top Header */}
         <div className="relative z-20 text-center max-w-3xl mx-auto">
-          <p className="font-body text-[10px] tracking-[0.5em] uppercase text-gold/75 mb-2">
-            Choreographed In 3D — Layer By Layer
+          <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-[#D4AF62] mb-2">
+            3D SPATIAL CHOREOGRAPHY
           </p>
-          <h2 className="font-heading text-4xl lg:text-5xl font-light text-champagne tracking-wide">
-            Watch a Grand Mehfil{" "}
-            <span className="italic text-gold">Come Alive</span>
+          <h2 className="font-kudus text-3xl sm:text-4xl lg:text-5xl font-normal text-[#FFF8E9] tracking-[0.12em] leading-tight">
+            WATCH A GRAND MEHFIL
+          </h2>
+          <h2 className="font-kudus text-3xl sm:text-4xl lg:text-5xl font-normal text-[#F2B8C6] tracking-[0.12em] leading-tight">
+            COME ALIVE
           </h2>
         </div>
 

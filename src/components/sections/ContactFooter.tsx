@@ -116,12 +116,15 @@ export default function ContactFooter() {
       {/* ── Contact Section ──────────────── */}
       <div className="py-28 md:py-40 bg-gradient-to-b from-deep-black to-royal-black">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
-          <div className="text-center mb-16 md:mb-20">
-            <p className="font-body text-[10px] tracking-[0.5em] uppercase text-gold/70 mb-5">
-              08 — Get in Touch
+          <div className="text-center mb-14 md:mb-20">
+            <p className="font-sans text-[10px] tracking-[0.45em] uppercase text-[#D4AF62] mb-3">
+              08 — GET IN TOUCH
             </p>
-            <h2 className="contact-heading font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-champagne tracking-wide">
-              Begin Your <span className="italic text-gold">Journey</span>
+            <h2 className="contact-heading font-kudus text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-[#FFF8E9] tracking-[0.12em] leading-tight">
+              BEGIN YOUR
+            </h2>
+            <h2 className="contact-heading font-kudus text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-[#F2B8C6] tracking-[0.12em] leading-tight">
+              ROYAL JOURNEY
             </h2>
           </div>
 

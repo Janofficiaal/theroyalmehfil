@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Volume2, VolumeX } from "lucide-react";
 import { useRoyalAudio } from "@/context/RoyalAudioContext";
+import { useBookingModal } from "@/context/BookingModalContext";
 
 const navLinks = [
   { label: "HOME", href: "#", active: true },
@@ -53,6 +54,7 @@ export default function RoyalNavigation({ soundOn, onToggleSound }: RoyalNavigat
   const navRef = useRef<HTMLElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const audioContext = useRoyalAudio();
+  const { openBooking } = useBookingModal();
 
   const isAudioActive = soundOn !== undefined ? soundOn : (audioContext.isPlaying && !audioContext.isMuted);
 
@@ -186,7 +188,7 @@ export default function RoyalNavigation({ soundOn, onToggleSound }: RoyalNavigat
               {/* BOOK YOUR EVENT Button - Rounded Pill with Champagne-Gold Border & Bold Ivory Text */}
               <button
                 type="button"
-                onClick={() => handleNavClick("#contact")}
+                onClick={openBooking}
                 className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#D4AF62] font-kudus text-[11px] tracking-[0.2em] uppercase font-normal text-[#FFF8E9] bg-[#3B0C18]/60 hover:bg-[#D4AF62] hover:text-[#080605] transition-all duration-300 cursor-pointer shadow-md group"
               >
                 <span>BOOK YOUR EVENT</span>

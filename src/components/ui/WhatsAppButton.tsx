@@ -19,7 +19,7 @@ function WhatsAppIcon({ className = "" }: { className?: string }) {
 
 export default function WhatsAppButton() {
   const whatsappUrl =
-    "https://wa.me/447399739114?text=Hello%20The%20Royal%20Mehfil%2C%20I%20would%20like%20to%20enquire%20about%20your%20luxury%20event%20management%20services.";
+    "https://wa.me/8801566005378?text=Hello%20The%20Royal%20Mehfil%2C%20I%20would%20like%20to%20enquire%20about%20your%20luxury%20event%20management%20services.";
 
   return (
     <aside

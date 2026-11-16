@@ -175,29 +175,17 @@ export default function ContactFooter() {
                     </h3>
                     <div className="space-y-1">
                       <a
-                        href="tel:+447399739114"
+                        href="tel:+8801566005378"
                         className="block font-body text-sm text-ivory/65 tracking-wide hover:text-gold transition-colors"
                       >
-                        +44 7399 739 114
-                      </a>
-                      <a
-                        href="tel:+447762308545"
-                        className="block font-body text-sm text-ivory/65 tracking-wide hover:text-gold transition-colors"
-                      >
-                        +44 7762 308 545
-                      </a>
-                      <a
-                        href="tel:+442036261301"
-                        className="block font-body text-sm text-ivory/65 tracking-wide hover:text-gold transition-colors"
-                      >
-                        +44 2036 261 301
+                        +880 1566 005 378
                       </a>
                     </div>
                   </div>
                 </div>
 
                 <a
-                  href="https://wa.me/447399739114?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20your%20event%20services."
+                  href="https://wa.me/8801566005378?text=Hello%20The%20Royal%20Mehfil%2C%20I%20would%20like%20to%20enquire%20about%20your%20luxury%20event%20management%20services."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 px-6 py-3 border border-gold/30 hover:border-gold/60 hover:bg-gold/[0.05] transition-all duration-300 group"
@@ -319,7 +307,7 @@ export default function ContactFooter() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full bg-transparent border-b border-gold/20 focus:border-gold/60 py-3 font-body text-sm text-champagne tracking-wide outline-none transition-colors placeholder:text-ivory/25"
-                      placeholder="+44 ..."
+                      placeholder="+880 1566-005378"
                     />
                   </div>
 

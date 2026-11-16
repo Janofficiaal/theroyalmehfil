@@ -242,7 +242,7 @@ export default function RoyalNavigation({ soundOn, onToggleSound }: RoyalNavigat
             BOOK YOUR EVENT →
           </button>
           <a
-            href="https://wa.me/447399739114?text=Hello%20The%20Royal%20Mehfil%2C%20I%20would%20like%20to%20enquire%20about%20your%20luxury%20event%20management%20services."
+            href="https://wa.me/8801566005378?text=Hello%20The%20Royal%20Mehfil%2C%20I%20would%20like%20to%20enquire%20about%20your%20luxury%20event%20management%20services."
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}

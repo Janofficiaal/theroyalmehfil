@@ -6,6 +6,7 @@ import { RoyalAudioProvider } from "@/context/RoyalAudioContext";
 import { BookingModalProvider } from "@/context/BookingModalContext";
 import GlobalAudioControls from "@/components/audio/GlobalAudioControls";
 import RoyalBookingModal from "@/components/ui/RoyalBookingModal";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 const royalKudus = localFont({
   src: "../fonts/DreamKudos.ttf",
@@ -64,6 +65,7 @@ export default function RootLayout({
           <BookingModalProvider>
             {children}
             <GlobalAudioControls />
+            <WhatsAppButton />
             <RoyalBookingModal />
           </BookingModalProvider>
         </RoyalAudioProvider>

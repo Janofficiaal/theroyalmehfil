@@ -6,7 +6,7 @@ import { useScrollProgress } from "@/hooks/useScrollProgress";
 
 import RoyalNavigation from "@/components/ui/RoyalNavigation";
 import RoyalScrollExperience from "@/components/sections/RoyalScrollExperience";
-import ExperienceSection from "@/components/sections/ExperienceSection";
+import AboutSection from "@/components/sections/AboutSection";
 import TransformationSection from "@/components/sections/TransformationSection";
 import MehfilAssemblySection from "@/components/sections/MehfilAssemblySection";
 import EventsSection from "@/components/sections/EventsSection";
@@ -30,8 +30,8 @@ export default function HomePage() {
         {/* 01 — Cinematic 4-Scene Royal Scroll Experience */}
         <RoyalScrollExperience />
 
-        {/* 02 — The Royal Experience */}
-        <ExperienceSection />
+        {/* 02 — About The Royal Mehfil */}
+        <AboutSection />
 
         {/* 03 — Venue Transformation (Before & After) */}
         <TransformationSection />

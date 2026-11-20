@@ -128,7 +128,7 @@ export default function EventsSection() {
   return (
     <section
       ref={sectionRef}
-      id="events"
+      id="venues"
       className="relative py-28 md:py-40 overflow-hidden bg-deep-black"
     >
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold/25 to-transparent" />

@@ -30,6 +30,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://theroyalmehfil.co.uk"),
   title: "THE ROYAL MEHFIL — Luxury Event Management | UK",
   description:
     "Where Every Event Becomes a Grand Mehfil. THE ROYAL MEHFIL is a UK-based luxury event management company creating extraordinary celebrations, thoughtfully imagined and beautifully brought to life.",
@@ -41,10 +42,15 @@ export const metadata: Metadata = {
     "corporate events UK",
     "The Royal Mehfil",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "THE ROYAL MEHFIL — Where Every Event Becomes a Grand Mehfil",
     description:
       "Extraordinary celebrations, thoughtfully imagined and beautifully brought to life.",
+    url: "https://theroyalmehfil.co.uk",
+    siteName: "THE ROYAL MEHFIL",
     type: "website",
     locale: "en_GB",
   },

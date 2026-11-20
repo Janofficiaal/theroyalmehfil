@@ -143,7 +143,7 @@ export default function ExperienceSection() {
             <div className="exp-image-wrap relative overflow-hidden aspect-[3/4] max-h-[620px] w-full">
               <div className="exp-image relative w-full h-[115%] -top-[7.5%]">
                 <Image
-                  src="/images/royal-banquet.jpg"
+                  src="/images/royal-banquet.webp"
                   alt="Luxurious candlelit royal banquet staged by The Royal Mehfil"
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"

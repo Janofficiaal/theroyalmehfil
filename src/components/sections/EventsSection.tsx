@@ -10,15 +10,15 @@ gsap.registerPlugin(ScrollTrigger);
 const eventCategories = [
   {
     title: "Weddings & Receptions",
-    image: "/images/royal-stage.jpg",
+    image: "/images/royal-stage.webp",
   },
   {
     title: "Nikkah Ceremonies",
-    image: "/images/royal-nikkah.jpg",
+    image: "/images/royal-nikkah.webp",
   },
   {
     title: "Mehndi & Sangeet Nights",
-    image: "/images/mehndi-night.jpg",
+    image: "/images/mehndi-night.webp",
   },
   {
     title: "Engagement Celebrations",
@@ -27,7 +27,7 @@ const eventCategories = [
   },
   {
     title: "Birthday Parties & Anniversaries",
-    image: "/images/royal-banquet.jpg",
+    image: "/images/royal-banquet.webp",
   },
   {
     title: "Baby Showers & Gender Reveals",
@@ -36,7 +36,7 @@ const eventCategories = [
   },
   {
     title: "Private Luxury Celebrations",
-    image: "/images/hero-ballroom.jpg",
+    image: "/images/hero-ballroom.webp",
   },
   {
     title: "Corporate Events & Conferences",
@@ -45,7 +45,7 @@ const eventCategories = [
   },
   {
     title: "Award Ceremonies & Gala Dinners",
-    image: "/images/royal-gala.jpg",
+    image: "/images/royal-gala.webp",
   },
   {
     title: "Product Launches & Brand Activations",

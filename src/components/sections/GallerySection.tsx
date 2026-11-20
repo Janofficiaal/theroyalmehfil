@@ -9,32 +9,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 const galleryImages = [
   {
-    src: "/images/hero-ballroom.jpg",
+    src: "/images/hero-ballroom.webp",
     caption: "Grand Wedding Reception",
     subtitle: "Royal Ballroom Production",
   },
   {
-    src: "/images/royal-stage.jpg",
+    src: "/images/royal-stage.webp",
     caption: "Gilded Couture Stage",
     subtitle: "Architectural Floral Design",
   },
   {
-    src: "/images/mehndi-night.jpg",
+    src: "/images/mehndi-night.webp",
     caption: "Mehndi & Sangeet Evening",
     subtitle: "Candlelit Cultural Splendour",
   },
   {
-    src: "/images/royal-nikkah.jpg",
+    src: "/images/royal-nikkah.webp",
     caption: "Sacred Nikkah Pavilion",
     subtitle: "Filigree Jaali & Brass Lanterns",
   },
   {
-    src: "/images/royal-banquet.jpg",
+    src: "/images/royal-banquet.webp",
     caption: "Signature Dining Experience",
     subtitle: "Candlelit Fine Hospitality",
   },
   {
-    src: "/images/royal-gala.jpg",
+    src: "/images/royal-gala.webp",
     caption: "Evening Gala & Awards",
     subtitle: "Stage & Spotlight Direction",
   },

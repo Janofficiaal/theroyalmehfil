@@ -65,6 +65,26 @@ export default function RootLayout({
       lang="en"
       className={`${royalKudus.variable} ${cormorant.variable} ${dmSans.variable} antialiased`}
     >
+      <head>
+        <link
+          rel="preload"
+          href="/images/scene1-surround-cutout.webp"
+          as="image"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          href="/images/curtain_left_ultra.webp"
+          as="image"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          href="/images/curtain_right_ultra.webp"
+          as="image"
+          type="image/webp"
+        />
+      </head>
       <body className="min-h-screen bg-deep-black text-ivory">
         <RoyalAudioProvider>
           <BookingModalProvider>

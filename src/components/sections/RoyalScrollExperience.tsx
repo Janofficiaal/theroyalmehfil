@@ -319,7 +319,7 @@ export default function RoyalScrollExperience() {
       <div
         className="scene2-ballroom absolute inset-0 z-[5] opacity-0 will-change-transform"
         style={{
-          backgroundImage: "url(/images/golden-ballroom.jpg)",
+          backgroundImage: "url(/images/golden-ballroom.webp)",
           backgroundSize: "cover",
           backgroundPosition: "center 38%",
           transformOrigin: "50% 50%",
@@ -348,7 +348,7 @@ export default function RoyalScrollExperience() {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage: "url(/images/scene1-surround-cutout.png)",
+            backgroundImage: "url(/images/scene1-surround-cutout.webp)",
             backgroundSize: "cover",
             backgroundPosition: "center center",
             filter: "brightness(1.06) contrast(1.04)",
@@ -392,7 +392,7 @@ export default function RoyalScrollExperience() {
             ref={leftDoorRef}
             className="absolute top-0 bottom-0 left-0 w-1/2 z-10 origin-left will-change-transform"
             style={{
-              backgroundImage: "url(/images/clean-door-left.jpg)",
+              backgroundImage: "url(/images/clean-door-left.webp)",
               backgroundSize: "100% 100%",
               boxShadow: "inset -5px 0 14px rgba(0,0,0,0.55), 3px 0 16px rgba(0,0,0,0.7)",
               transformStyle: "preserve-3d",
@@ -409,7 +409,7 @@ export default function RoyalScrollExperience() {
             ref={rightDoorRef}
             className="absolute top-0 bottom-0 right-0 w-1/2 z-10 origin-right will-change-transform"
             style={{
-              backgroundImage: "url(/images/clean-door-right.jpg)",
+              backgroundImage: "url(/images/clean-door-right.webp)",
               backgroundSize: "100% 100%",
               boxShadow: "inset 5px 0 14px rgba(0,0,0,0.55), -3px 0 16px rgba(0,0,0,0.7)",
               transformStyle: "preserve-3d",
@@ -431,7 +431,7 @@ export default function RoyalScrollExperience() {
           className="absolute top-0 bottom-0 left-0 z-[18] pointer-events-none will-change-transform"
           style={{
             width: "25.43%",
-            backgroundImage: "url(/images/curtain_left_ultra.png)",
+            backgroundImage: "url(/images/curtain_left_ultra.webp)",
             backgroundSize: "100% 100%",
             transformOrigin: "left center",
           }}
@@ -443,7 +443,7 @@ export default function RoyalScrollExperience() {
           className="absolute top-0 bottom-0 right-0 z-[18] pointer-events-none will-change-transform"
           style={{
             width: "25.43%",
-            backgroundImage: "url(/images/curtain_right_ultra.png)",
+            backgroundImage: "url(/images/curtain_right_ultra.webp)",
             backgroundSize: "100% 100%",
             transformOrigin: "right center",
           }}
@@ -527,7 +527,7 @@ export default function RoyalScrollExperience() {
       <div
         className="scene3-celebration absolute inset-0 z-[20] opacity-0 will-change-transform"
         style={{
-          backgroundImage: "url(/images/wedding-celebration.jpg)",
+          backgroundImage: "url(/images/wedding-celebration.webp)",
           backgroundSize: "cover",
           backgroundPosition: "center 42%",
           transformOrigin: "50% 50%",
@@ -569,7 +569,7 @@ export default function RoyalScrollExperience() {
       <div
         className="scene4-brand-plate absolute inset-0 z-[30] opacity-0 will-change-transform flex items-center justify-center"
         style={{
-          backgroundImage: "url(/images/scene4-brand-reveal.jpg)",
+          backgroundImage: "url(/images/scene4-brand-reveal.webp)",
           backgroundSize: "cover",
           backgroundPosition: "center center",
           filter: "brightness(1.1) contrast(1.05)",

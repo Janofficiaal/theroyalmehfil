@@ -61,12 +61,11 @@ export default function TransformationSection() {
           {/* After Image: Transformed Royal Mehfil (Full Background) */}
           <div className="absolute inset-0">
             <Image
-              src="/images/golden-ballroom.jpg"
+              src="/images/golden-ballroom.webp"
               alt="Transformed Royal Mehfil Ballroom"
               fill
               className="object-cover"
               sizes="(max-width: 1200px) 100vw, 1200px"
-              priority
             />
             {/* After Tag */}
             <div className="absolute top-5 right-5 px-3.5 py-1.5 rounded-full border border-[#D4AF62] bg-black/60 backdrop-blur-md">
@@ -82,12 +81,11 @@ export default function TransformationSection() {
             style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
           >
             <Image
-              src="/images/ballroom-empty-before.jpg"
+              src="/images/ballroom-empty-before.webp"
               alt="Empty Palace Venue Before Setup"
               fill
               className="object-cover"
               sizes="(max-width: 1200px) 100vw, 1200px"
-              priority
             />
             {/* Before Tag */}
             <div className="absolute top-5 left-5 px-3.5 py-1.5 rounded-full border border-[#FFF8E9]/30 bg-black/60 backdrop-blur-md">

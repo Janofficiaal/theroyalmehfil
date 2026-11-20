@@ -7,7 +7,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  MessageCircle,
   Send,
   ArrowUpRight,
   CheckCircle2,
@@ -98,7 +97,7 @@ export default function ContactFooter() {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nEvent Type: ${formData.eventType}\n\nMessage:\n${formData.message}`
     );
-    window.location.href = `mailto:info@uksecuritypartners.co.uk?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@theroyalmehfil.co.uk?subject=${subject}&body=${body}`;
   };
 
   const handleChange = (
@@ -157,10 +156,10 @@ export default function ContactFooter() {
                       Email Us
                     </h3>
                     <a
-                      href="mailto:info@uksecuritypartners.co.uk"
+                      href="mailto:info@theroyalmehfil.co.uk"
                       className="font-body text-sm text-ivory/65 tracking-wide hover:text-gold transition-colors"
                     >
-                      info@uksecuritypartners.co.uk
+                      info@theroyalmehfil.co.uk
                     </a>
                   </div>
                 </div>
@@ -175,28 +174,38 @@ export default function ContactFooter() {
                     </h3>
                     <div className="space-y-1">
                       <a
-                        href="tel:+8801566005378"
+                        href="tel:+447399739114"
                         className="block font-body text-sm text-ivory/65 tracking-wide hover:text-gold transition-colors"
                       >
-                        +880 1566 005 378
+                        +44 7399 739 114
+                      </a>
+                      <a
+                        href="tel:+447762308545"
+                        className="block font-body text-sm text-ivory/65 tracking-wide hover:text-gold transition-colors"
+                      >
+                        +44 7762 308 545
+                      </a>
+                      <a
+                        href="tel:+442036261301"
+                        className="block font-body text-sm text-ivory/65 tracking-wide hover:text-gold transition-colors"
+                      >
+                        +44 2036 261 301
                       </a>
                     </div>
                   </div>
                 </div>
 
                 <a
-                  href="https://wa.me/8801566005378?text=Hello%20The%20Royal%20Mehfil%2C%20I%20would%20like%20to%20enquire%20about%20your%20luxury%20event%20management%20services."
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:info@theroyalmehfil.co.uk"
                   className="inline-flex items-center gap-3 px-6 py-3 border border-gold/30 hover:border-gold/60 hover:bg-gold/[0.05] transition-all duration-300 group"
                   data-cursor-hover
                 >
-                  <MessageCircle
+                  <Mail
                     className="w-4 h-4 text-gold/75 group-hover:text-gold transition-colors"
                     strokeWidth={1.5}
                   />
                   <span className="font-body text-xs tracking-[0.2em] uppercase text-champagne/85 group-hover:text-champagne transition-colors">
-                    WhatsApp Enquiry
+                    Email Concierge
                   </span>
                   <ArrowUpRight
                     className="w-3.5 h-3.5 text-gold/60 group-hover:text-gold transition-colors"
@@ -238,9 +247,9 @@ export default function ContactFooter() {
                     Thank you for reaching out to The Royal Mehfil. Your email
                     client has been prepared for{" "}
                     <span className="text-gold">
-                      info@uksecuritypartners.co.uk
+                      info@theroyalmehfil.co.uk
                     </span>
-                    , or you may connect directly via WhatsApp or telephone.
+                    , or you may connect directly via telephone.
                   </p>
                   <button
                     type="button"
@@ -307,7 +316,7 @@ export default function ContactFooter() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full bg-transparent border-b border-gold/20 focus:border-gold/60 py-3 font-body text-sm text-champagne tracking-wide outline-none transition-colors placeholder:text-ivory/25"
-                      placeholder="+880 1566-005378"
+                      placeholder="+44 7000 000000"
                     />
                   </div>
 

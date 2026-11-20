@@ -18,20 +18,20 @@ export default function LoadingScreen() {
 
     tl.fromTo(
       logoRef.current,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }
+      { opacity: 0, y: 10 },
+      { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }
     );
     tl.fromTo(
       lineRef.current,
       { scaleX: 0 },
-      { scaleX: 1, duration: 1.2, ease: "power2.inOut" },
-      "-=0.3"
+      { scaleX: 1, duration: 0.35, ease: "power2.inOut" },
+      "-=0.1"
     );
     tl.to(containerRef.current, {
       opacity: 0,
-      duration: 0.6,
+      duration: 0.3,
       ease: "power2.inOut",
-      delay: 0.3,
+      delay: 0.1,
     });
   }, []);
 

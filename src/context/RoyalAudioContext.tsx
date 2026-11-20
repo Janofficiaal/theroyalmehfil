@@ -52,7 +52,7 @@ function getGlobalAudio(): HTMLAudioElement {
   }
   if (!globalAudioInstance) {
     const audio = new Audio("/audio/royal-mehfil.mp3");
-    audio.preload = "auto";
+    audio.preload = "none";
     audio.loop = true;
     // Exactly 60% default volume (or restored user session choice)
     audio.volume = getSavedSessionVolume();

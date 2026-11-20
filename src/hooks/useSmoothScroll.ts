@@ -11,7 +11,12 @@ export function useSmoothScroll() {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    if (prefersReducedMotion) return;
+    const isTouchDevice =
+      window.matchMedia("(pointer: coarse)").matches ||
+      "ontouchstart" in window ||
+      navigator.maxTouchPoints > 0;
+
+    if (prefersReducedMotion || isTouchDevice) return;
 
     let lenis: Lenis | null = null;
     let tickerCallback: ((time: number) => void) | null = null;

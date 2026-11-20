@@ -219,12 +219,12 @@ export default function RoyalBookingModal() {
                 </div>
                 <div>
                   <label className="block font-kudus text-[10px] tracking-[0.16em] uppercase text-[#D4AF62] mb-1.5">
-                    PHONE / WHATSAPP
+                    PHONE NUMBER
                   </label>
                   <input
                     type="tel"
                     required
-                    placeholder="+880 1566-005378"
+                    placeholder="+44 7000 000000"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-lg bg-black/40 border border-[#D4AF62]/30 text-xs text-[#FFF8E9] placeholder:text-[#FFF8E9]/30 focus:outline-none focus:border-[#F2B8C6]"

@@ -241,15 +241,6 @@ export default function RoyalNavigation({ soundOn, onToggleSound }: RoyalNavigat
           >
             BOOK YOUR EVENT →
           </button>
-          <a
-            href="https://wa.me/8801566005378?text=Hello%20The%20Royal%20Mehfil%2C%20I%20would%20like%20to%20enquire%20about%20your%20luxury%20event%20management%20services."
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setIsOpen(false)}
-            className="mobile-nav-link px-7 py-2.5 rounded-full border border-[#25D366]/40 text-[#25D366] font-kudus text-xs tracking-[0.2em] uppercase hover:bg-[#25D366] hover:text-black transition-colors"
-          >
-            WHATSAPP CONCIERGE →
-          </a>
         </div>
       </div>
     </>

@@ -13,6 +13,14 @@ export function useCustomCursor() {
   }, []);
 
   useEffect(() => {
+    const isTouchDevice =
+      typeof window !== "undefined" &&
+      (window.matchMedia("(pointer: coarse)").matches ||
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0);
+
+    if (isTouchDevice) return;
+
     const cursor = document.createElement("div");
     cursor.className = "custom-cursor";
     document.body.appendChild(cursor);
@@ -37,13 +45,6 @@ export function useCustomCursor() {
     // Re-attach on DOM changes
     const observer = new MutationObserver(() => attachListeners());
     observer.observe(document.body, { childList: true, subtree: true });
-
-    // Hide on touch devices
-    const isTouchDevice =
-      "ontouchstart" in window || navigator.maxTouchPoints > 0;
-    if (isTouchDevice) {
-      cursor.style.display = "none";
-    }
 
     return () => {
       window.removeEventListener("mousemove", onMouseMove);

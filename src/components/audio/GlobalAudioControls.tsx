@@ -123,7 +123,10 @@ export default function GlobalAudioControls() {
             aria-label="Volume level"
             className="w-14 h-1 accent-[#D4AF62] cursor-pointer bg-white/15 rounded-lg appearance-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-2.5 [&::-webkit-slider-thumb]:h-2.5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#D4AF62] [&::-webkit-slider-thumb]:shadow-[0_0_6px_rgba(212,175,98,0.8)]"
           />
-          <span className="font-kudus text-[9px] text-[#FFF8E9]/80 w-6 text-right tabular-nums select-none">
+          <span
+            suppressHydrationWarning
+            className="font-kudus text-[9px] text-[#FFF8E9]/80 w-6 text-right tabular-nums select-none"
+          >
             {isMuted ? "0%" : `${Math.round(volume * 100)}%`}
           </span>
         </div>
